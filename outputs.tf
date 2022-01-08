@@ -3,9 +3,11 @@ locals {
 }
 
 output "bucket" {
-  value = local.result.bucket
+  description = "The S3 bucket name."
+  value       = local.result.bucket
 }
 
 output "key" {
-  value = local.result.key
+  description = "The S3 key."
+  value       = local.result.key
 }
