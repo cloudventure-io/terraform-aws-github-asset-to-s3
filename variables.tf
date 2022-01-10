@@ -6,7 +6,7 @@ variable "tag" {
   description = "The tag name, e.g. v1.0.0."
 }
 
-variable "assetName" {
+variable "asset_name" {
   description = "The name of the asset file, e.g. asset.zip."
 }
 

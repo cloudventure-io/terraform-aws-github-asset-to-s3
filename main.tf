@@ -88,7 +88,7 @@ data "aws_lambda_invocation" "copier" {
 
     repository = var.repository
     tag        = var.tag
-    assetName  = var.assetName
+    assetName  = var.asset_name
 
     token = var.token
   })
