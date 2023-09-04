@@ -41,3 +41,7 @@ variable "memory_size" {
   description = "Lambda function memory size."
   default     = 128
 }
+
+variable "runtime" {
+  default = "nodejs14.x"
+}

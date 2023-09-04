@@ -72,7 +72,7 @@ resource "aws_lambda_function" "copier" {
   function_name    = var.function_name
   role             = module.lambda_role.role.arn
   handler          = "src/index.handler"
-  runtime          = "nodejs14.x"
+  runtime          = var.runtime
   timeout          = var.timeout
   memory_size      = var.memory_size
   publish          = true
