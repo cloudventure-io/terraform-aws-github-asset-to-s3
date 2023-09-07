@@ -2,6 +2,7 @@ const {
   S3Client,
   HeadObjectCommand,
   PutObjectCommand,
+  NotFound,
 } = require("@aws-sdk/client-s3");
 
 const s3 = new S3Client({});
@@ -71,8 +72,8 @@ exports.handler = async ({
     );
     exists = true;
   } catch (ex) {
-    if (ex.code !== "NotFound") {
-      throw ex;
+    if (!(ex instanceof NotFound)) {
+        throw ex;
     }
   }
 
